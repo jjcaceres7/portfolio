@@ -1,0 +1,304 @@
+/* calendario */
+
+.calendarContainer{
+    width: 98%;
+    max-width: 100%;
+    /* border: 2px solid #dadd0e ; */
+    border-radius: 8px;
+    padding: 1%;
+}
+
+/* text month year */
+.div-date-visual{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 8rem;
+    padding: 1rem;
+    margin: .3rem;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid #dadd0e;
+}
+.div-date-visual:hover{
+    cursor: default;
+}
+
+
+/* General structure */
+.div-sistem-gerenal {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Calendar container */
+.div-calendar-gerenal {
+    width: 60%;
+    height: 90%;
+    display: block;
+    background-color: #f0f0f0; /* Soft background for contrast */
+    border-radius: 8px;
+    padding: .2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Detail section */
+.div-detail-calendar {
+    width: 38%;
+    height: 90%;
+    padding: .2rem;
+    background-color: #ffffff;
+    color: #181818;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-detail-calendar-info{
+    padding: 1rem;
+}
+
+/* Button */
+.btn-new-order-with-day {
+    width: 98%;
+    height: 2.5rem;
+    background-color: #181818;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: .6rem;
+    margin-bottom: 1rem;
+}
+
+.btn-new-order-with-day:hover {
+    background-color: #dadd0e;
+    color: #181818;
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+}
+
+/* Calendar table */
+.div-calendar {
+    width: 100%;
+    height: 100%;
+    background-color: #202020; /* Dark background for contrast */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-calendar-head {
+    width: 100%;
+    height: 2rem;
+    background-color: #333; /* Darker header background */
+    color: #fff;
+    
+}
+
+.tr-head {
+    width: 100%;
+}
+
+.thCalendar {
+    border: 1px solid #b2b2b2;
+    text-align: center;
+    color: #ffffff;
+    padding: 0.1rem;
+    word-wrap: break-word;
+}
+.thCalendar:hover{
+    cursor: default;
+}
+
+.table-calendar-Body {
+    table-layout: fixed;
+    width: 100%;
+    height: 90%;
+    padding: 0.3rem;
+}
+
+.table-body-days {
+    width: 100%;
+    height: 95%;
+}
+
+.tr-days {
+    height: 16%;
+    width: 100%;
+    vertical-align: baseline;
+}
+
+.div-days {
+    width: 100%;
+    height: 100%;
+}
+
+.day,
+.today,
+.other-day {
+    color: white;
+    height: 3.5rem;
+    text-align: center;
+    margin: 0.1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.day {
+    border: 1px solid #8c8c8c;
+}
+
+.today {
+    border: 2px solid #fe9600;
+}
+
+.other-day {
+    opacity: 0.5;
+    border: 1px solid #454546;
+}
+
+.num-day{
+    margin-top: .2rem;
+}
+
+
+
+.clicked{
+    background-color: #dadd0e;
+    color: #181818;
+}
+
+/* .daySedeSelected {
+    background-color: #efff15; 
+} */
+.complete{
+    background-color: #551d07;
+}
+
+/* Hover effects */
+.today:hover,
+.day:hover,
+.other-day:hover {
+    background-color: #505050; /* Subtle hover for both types */
+    cursor: pointer;
+}
+
+/* Calendar controls */
+.div-function-calendar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .1rem;
+}
+
+.month-control {
+    width: 7rem;
+    height: 2rem;
+    display: inline-block;
+    background-color: #7C7C7C;
+    color: #fff;
+    margin: .6rem;
+    text-align: center;
+    line-height: 2rem;
+    user-select: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.month-control:hover {
+    cursor: pointer;
+    background-color: #dadd0e;
+    color: #181818;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+.arrow {
+    stroke:white;
+    width: 35px;
+    height: 35px;
+}
+
+.month-control:hover .arrow{
+    stroke: #181818;
+    transform: scale(1.1);
+    transition: all 0.2s ease;    
+}
+
+.month-control:active {
+    background-color: #dadd0e;
+    transform: scale(0.95);
+  }
+
+
+
+/* Day status styles */
+.realizado {
+    background-color: #495049;
+}
+
+.confirmado {
+    background-color: #30dd0e;
+}
+
+.enespera {
+    background-color: #dadd0e;
+}
+
+.cancelado {
+    background-color: #dd0e0e;
+}
+
+/* Button Styling */
+.claseSeleccionada button {
+    width: 100%;
+    height: 2.0rem;
+    background-color: #fe9600; /* Blue background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.claseSeleccionada button:hover {
+    background-color: #181818; /* Darker blue on hover */
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .div-sistem-gerenal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-calendar-gerenal,
+    .div-detail-calendar {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .day, .today, .other-day {
+        height: 2.5rem;
+    }
+
+    .day{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    
+    .num-day, .data-day{
+        width: 45%;
+        flex-direction: row;
+        display: flex;
+    }
+}
+

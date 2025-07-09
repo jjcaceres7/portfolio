@@ -1,0 +1,44 @@
+.modal-content{
+    color: #CCCCCC;
+    background-color: #252525 !important;
+    
+}
+
+.modal-header{
+    color: #CCCCCC !important;
+}
+
+.btn-close {
+  filter: invert(1); /* Convierte el ícono de negro a blanco */
+}
+
+.cursor-move {
+  cursor: move;
+}
+
+.draggable-modal {
+    transition: none !important; /* quita animaciones si interfieren */
+    position: absolute !important;
+    margin: 0 !important;
+    width: auto !important;
+    min-width: 300px; /* evita que se encoja */
+    max-width: 90vw;
+}
+
+.inputSetEvent{
+    width: 100%;
+}
+
+.inp-Text-Time{
+    width: 3.5rem;
+}
+
+@media (max-width: 900px) {
+  .modal-dialog {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  
+}
+
