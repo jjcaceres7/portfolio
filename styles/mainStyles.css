@@ -1,0 +1,59 @@
+.index{
+    padding: .3rem 1rem;
+    background-color: #87C19B;
+    border-radius: 1rem;
+    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 1);
+    
+}
+
+section{
+    margin: 1rem;
+    background-color: #EFE081;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.imgP{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #EFE081;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    gap: 1rem; 
+}
+
+.imgP p{
+    flex: 1;
+}
+
+.img404{
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.imgRambo{
+    border-radius: 1rem;
+    width: 50%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.contact h2{
+    margin-left: 1rem;
+}
+
+.form{
+    padding: .3rem 1rem;
+}
+
+.about h1{
+    margin-left: 1rem;
+}
+
+.about h1,h2{
+    margin-left: 1rem;
+}
